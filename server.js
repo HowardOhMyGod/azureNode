@@ -14,6 +14,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Expose a default route, and begin listening for requests.
 app.get("/", require("./routes/index"));
+app.get('/fuck', (req, res) => {
+  res.status(200).send({
+    'Name': 'Howard'
+  })
+})
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
