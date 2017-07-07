@@ -17,6 +17,7 @@ app.get("/", require("./routes/index"));
 app.get('/fuck', (req, res) => {
   res.status(200).send({
     'Name': 'Howard'
+    'G': 'error'
   })
 })
 const port = process.env.PORT || 3000;
