@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", require("./routes/index"));
 app.get('/fuck', (req, res) => {
   res.status(200).send({
-    'Name': 'Howard'
+    'Name': 'Howard',
     'G': 'error'
   })
 })
